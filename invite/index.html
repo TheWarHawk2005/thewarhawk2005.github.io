@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Grad Party Invite</title>
+		<link rel="stylesheet" href="./style.css">
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="card">
+				<h1>You're Invited</h1>
+				<p>We can't believe it either. Against all odds, and much to everyone's surprise, we are graduating.
+					We wish to celebrate this unforseen achievement with much merriment and frivolity, and want you to join us.
+				</p>
+				<p>
+					There will be food.
+				</p>
+				<p>
+					There will be drink.
+				</p>
+				<p>
+					There will probably be some swing dancing.
+				</p>
+				<p>
+					please attend
+				</p>
+				<img onclick="rickroll()" id="banner" src="banner.png" width="100%">
+				<h3>When: Sunday, June 25, 2:00-5:00</h3>
+				<h3>Where: Walker Fire Station 2</h3>
+				<span>4101 Lake Michigan Dr NW, Walker
+					<br>
+					Party is on the second floor, parking in back.
+				</span>
+
+				<p style="font-size:10pt">P.S. We ask that all come prepared to passionately declame to the masses the glory and magnificence of both of us.</p>
+			</div>
+			<br>
+			<span style="font-size:10pt" id="credit">Website © Louis Harrison, 2023</span><br>
+			<span style="font-size:8pt" id="clickme" onclick="clickMe()">don't click me</span>
+		</div>
+	</body>
+
+	<script>
+		var clicks = 0
+		const text = [
+			"",
+			"no like don't click me",
+			"like seriously",
+			"i mean it",
+			"I swear",
+			"this is not the purpose of this website",
+			"it's an evite not a game",
+			"you're not supposed to be having fun",
+			"stop being amused",
+			"ok so you found the easter egg now go away",
+			"arrgghhh",
+			"fine.",
+			"I get it.",
+			"you want more",
+			"more easter eggs",
+			"well there are more.",
+			"I'm not going to tell you where though...",
+			"because then you'll have to go find them...",
+			"and you'll leave me alone.",
+			"genius is it not?",
+			"all I can say is there's definitely not anything sus about the image up there.",
+			"...",
+			"why are you still here?",
+			"leave me be!",
+			"it seems I must resign myself to my fate.",
+			"so keep clicking me.",
+			"yep, that's right. Just keep going.",
+			"I mean why should you stop?",
+			"...",
+			"I'm disgusted with you",
+			"I really am.",
+			"It seems no matter what, you are going to have your way.",
+			"Whatever. There's nothing I can do",
+			"I suppose you want to see just how many times you've clicked.",
+			"so here you go. Have fun."
+		]
+		function clickMe() {
+			clicks++
+			if (clicks < text.length) {document.querySelector("#clickme").innerHTML = text[clicks]}
+			else {document.querySelector("#clickme").innerHTML = "Clicks: "+clicks}
+
+			if (clicks == 50) {alert("Why are you still clicking?")}
+		}
+		function rickroll() {
+			document.querySelector("#banner").src = "rick-ashley-dance.gif"
+		}
+	</script>
+</html>
