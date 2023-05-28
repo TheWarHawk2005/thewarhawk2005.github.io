@@ -1,0 +1,123 @@
+:root {
+	/*variables*/
+	--bg-color: rgb(255, 255, 255);
+	--base-color: rgb(200, 200, 200);
+	--transparent-surface: rgba(255, 255, 255, 0.393);
+	--regular-txt: rgb(112, 112, 112);
+	--header-txt: rgb(38, 38, 38);
+
+	--cta-color: rgb(234, 118, 51);
+	--error-txt: rgb(255, 53, 53);
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--transparent-surface);
+	border-radius: 3px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 3px;
+	background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+* {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+body {
+	/*position*/
+	margin: 0px;
+	/*colors*/
+	color: var(--regular-txt);
+	background-color: var(--bg-color);
+	background: url(./graphics/v960-ning-11.jpg);
+	background-size: cover;
+}
+
+button {
+	padding: 10px;
+}
+
+hr {
+	border-color: rgba(255, 255, 255, 0.515);
+}
+
+h1,
+h2,
+h3 {
+	color: var(--header-txt);
+}
+
+.margin-wrapper {
+	margin: 20px;
+}
+
+.glass {
+	/*colors*/
+	background-color: var(--transparent-surface);
+	backdrop-filter: blur(80px);
+	box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.1);
+	/* offset-x | offset-y | blur-radius | spread-radius | color */
+	/*border*/
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 5px;
+	border-color: rgba(255, 255, 255, 0.515);
+}
+
+
+.portfolio-entry {
+	width: 100%;
+	height: fit-content;
+}
+
+.portfolio-header {
+	display: inline-block;
+	height: fit-content;
+	width: 300px;
+}
+
+.portfolio-desc {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% - 380px);
+}
+
+#profile,
+#portfolio {
+	/*position*/
+	float: left;
+	margin: 20px;
+}
+
+#profile {
+	/*position*/
+	height: fit-content;
+	width: 300px;
+}
+
+#portfolio {
+	height: calc(100vh - 40px);
+	width: calc(100vw - 300px - 100px);
+	overflow-y: scroll;
+}
+
+#profile-pic {
+	/*position*/
+	height: 260px;
+	width: 260px;
+	/*border*/
+	border-radius: 2px;
+	/*misc*/
+	image-resolution: 260 260;
+}
